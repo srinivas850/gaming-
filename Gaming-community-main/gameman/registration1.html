@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider Monkey Themed Login</title>
+    <title>Spider Monkey Themed Registration</title>
     <style>
         body {
-            background: linear-gradient(135deg, #3b0066, #001a66); /* Violet to Dark Blue */
+            background: linear-gradient(135deg, #3b0066, #001a66);
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -20,11 +20,11 @@
         }
 
         .login-container {
-            background: linear-gradient(145deg, #2a004d, #001133); /* Darker violet and blue */
+            background: linear-gradient(145deg, #2a004d, #001133);
             border-radius: 15px;
             padding: 40px;
             width: 400px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 5px 10px rgba(128, 0, 255, 0.4); /* Violet shadow */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 5px 10px rgba(128, 0, 255, 0.4);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -35,25 +35,25 @@
 
         .login-container:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(128, 0, 255, 0.7), 0 10px 25px rgba(0, 0, 128, 0.4); /* Updated shadows */
+            box-shadow: 0 15px 35px rgba(128, 0, 255, 0.7), 0 10px 25px rgba(0, 0, 128, 0.4);
         }
 
         .login-container h1 {
-            color: #cc33ff; /* Violet text */
+            color: #cc33ff;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 8px rgba(128, 0, 255, 0.7); /* Violet glow */
+            text-shadow: 2px 2px 8px rgba(128, 0, 255, 0.7);
             font-size: 2.5rem;
             position: relative;
         }
 
         .login-container h1:before {
-            content: '🕷️';  /* Spider monkey icon */
+            content: '🕷️';
             position: absolute;
             left: -40px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.5rem;
-            color: #cc33ff; /* Violet */
+            color: #cc33ff;
         }
 
         .input-group {
@@ -65,7 +65,7 @@
         .input-group input {
             width: 100%;
             padding: 15px;
-            background-color: #29004d; /* Dark violet */
+            background-color: #29004d;
             border: none;
             border-radius: 8px;
             color: #ffffff;
@@ -77,8 +77,8 @@
 
         .input-group input:focus {
             outline: none;
-            background-color: #3b0066; /* Violet */
-            box-shadow: 0 8px 20px rgba(128, 0, 255, 0.5), 0 2px 6px rgba(0, 0, 128, 0.3); /* Violet glow */
+            background-color: #3b0066;
+            box-shadow: 0 8px 20px rgba(128, 0, 255, 0.5), 0 2px 6px rgba(0, 0, 128, 0.3);
         }
 
         .input-group .icon {
@@ -87,12 +87,12 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.2rem;
-            color: #cc33ff; /* Violet icons */
+            color: #cc33ff;
         }
 
         button {
             padding: 15px;
-            background-color: #9900cc; /* Violet */
+            background-color: #9900cc;
             border: none;
             border-radius: 8px;
             color: white;
@@ -105,13 +105,9 @@
         }
 
         button:hover {
-            background-color: #cc33ff; /* Lighter violet */
+            background-color: #cc33ff;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(128, 0, 255, 0.5); /* Violet hover effect */
-        }
-
-        .login-container:hover {
-            box-shadow: 0 15px 25px rgba(128, 0, 255, 0.7), 0 10px 15px rgba(0, 0, 128, 0.4);
+            box-shadow: 0 10px 25px rgba(128, 0, 255, 0.5);
         }
 
         .error {
@@ -130,75 +126,84 @@
                 font-size: 2rem;
             }
         }
-
     </style>
 </head>
 <body>
+    <div class="login-container">
+        <h1>Spider Monkey Registration</h1>
+        <form action="/submit" method="POST" id="registrationForm">
+            <div class="input-group">
+                <span class="icon">👤</span>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">👤</span>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">📧</span>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <span class="icon">📱</span>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            </div>
+            <button type="submit">Register</button>
+            <div id="errorMsg" class="error"></div>
+        </form>
+    </div>
 
-<div class="login-container">
-    <h1>Spider Monkey Login</h1>
-    <form action="/submit"method="POST"id="loginForm">
-        <div class="input-group">
-            <span class="icon">👤</span>
-            <input type="text" id="firstName" placeholder="First Name">
-        </div>
-        <div class="input-group">
-            <span class="icon">👤</span>
-            <input type="text" id="lastName" placeholder="Last Name">
-        </div>
-        <div class="input-group">
-            <span class="icon">📧</span>
-            <input type="email" id="email" placeholder="Email">
-        </div>
-        <div class="input-group">
-            <span class="icon">📱</span>
-            <input type="tel" id="mobile" placeholder="Mobile Number">
-        </div>
-        <button type="submit">Sign In</button>
-        <div id="errorMsg" class="error"></div>
-    </form>
-</div>
+    <script>
+        // Form validation and submission
+        const form = document.getElementById('registrationForm');
+        const errorMsg = document.getElementById('errorMsg');
 
-<script>
-    const form = document.getElementById('loginForm');
-    const errorMsg = document.getElementById('errorMsg');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const mobile = document.getElementById('mobile').value.trim();
 
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const email = document.getElementById('email').value;
-        const mobile = document.getElementById('mobile').value;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const mobilePattern = /^[0-9]{10}$/;
+            const namePattern = /^[A-Za-z]+$/;
 
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const mobilePattern = /^[0-9]{10}$/;
-        const namePattern = /^[A-Za-z]+$/;
+            // Validation
+            if (!namePattern.test(firstName)) {
+                errorMsg.textContent = 'First Name must contain only letters.';
+                return;
+            }
 
-        // Validation
-        if (!namePattern.test(firstName)) {
-            errorMsg.textContent = 'First Name must contain only letters.';
-            return;
-        }
+            if (!namePattern.test(lastName)) {
+                errorMsg.textContent = 'Last Name must contain only letters.';
+                return;
+            }
 
-        if (!namePattern.test(lastName)) {
-            errorMsg.textContent = 'Last Name must contain only letters.';
-            return;
-        }
+            if (!emailPattern.test(email)) {
+                errorMsg.textContent = 'Please enter a valid email address.';
+                return;
+            }
 
-        if (!emailPattern.test(email)) {
-            errorMsg.textContent = 'Please enter a valid email address.';
-            return;
-        }
+            if (!mobilePattern.test(mobile)) {
+                errorMsg.textContent = 'Mobile number must be 10 digits.';
+                return;
+            }
 
-        if (!mobilePattern.test(mobile)) {
-            errorMsg.textContent = 'Mobile number must be 10 digits.';
-            return;
-        }
-        errorMsg.textContent = '';  
-        window.location.href = 'index.html'; 
-    });
-</script>
+            if (password.length < 6) {
+                errorMsg.textContent = 'Password must be at least 6 characters long.';
+                return;
+            }
 
+            errorMsg.textContent = '';  
+            form.submit(); // Proceed with form submission
+        });
+    </script>
 </body>
 </html>
