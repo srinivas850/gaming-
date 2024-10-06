@@ -44,9 +44,11 @@ const api = http.createServer((req, res) => {
         });
         req.on("end", () => {
             const formData = new URLSearchParams(body);
-            const name = formData.get("fullname");
+            const firstName = formData.get("firstName");
+            const lastName = formData.get("lastName");
             const email = formData.get("email");
-            const password = formData.get("password");
+            const password = formData.get("password"); // Correctly extract password
+            const mobile = formData.get("mobile"); // Extract mobile if needed
 
             // Check if the email is already registered
             const userExists = users.find(user => user.email === email);
@@ -56,7 +58,7 @@ const api = http.createServer((req, res) => {
                 res.end(JSON.stringify({ message: "User already registered. Please login." }));
             } else {
                 // Register the user
-                const newUser = { name, email, password };
+                const newUser = { firstName, lastName, email, password, mobile };
                 users.push(newUser);
 
                 try {
@@ -109,7 +111,7 @@ const api = http.createServer((req, res) => {
         fs.readFile(filePathFirst, "utf8", (err, data) => {
             if (err) {
                 res.statusCode = 500;
-                res.end("Error loading first page");
+                res.end("Error loading main page");
                 console.error(err);
             } else {
                 res.end(data);
@@ -123,7 +125,7 @@ const api = http.createServer((req, res) => {
         fs.readFile(filePathRegister, "utf8", (err, data) => {
             if (err) {
                 res.statusCode = 500;
-                res.end("Error loading register page");
+                res.end("Error loading registration page");
                 console.error(err);
             } else {
                 res.end(data);
