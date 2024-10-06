@@ -1,0 +1,889 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-family: Montserrat;
+}
+
+body {
+    background: linear-gradient(to right, #071b4a, #141e43);
+    color: #fff;
+    text-align: center;
+}
+/* ///..................../////////// */
+
+
+
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color:#FFD740; /* Light blue background */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-image: url(game.png);
+    background-position: center;
+    
+   background-size:contain;
+
+}
+.chatbox p{
+    color: black;
+}
+.chatbox img{
+    height: 50px;
+    width: 50px;
+}
+
+.chatbox:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+#chat-icon {
+    width: 35px;
+    height: 35px;
+}
+/* NAV BAR SECTION  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quests-btn {
+    background-color: #FFD740;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #111;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.auth a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.auth a:hover {
+    text-decoration: none;
+    color: #7417bc;
+}
+/* /////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+/* MIDDLE VIDEO INTERFACE */
+.hero {
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #0b1f4b, #020e1e);
+    background-image: url(video.gif);
+    background-position: center;
+  background-size: cover;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.usdc {
+    color: #FFD740;
+    font-weight: bold;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    background-color: #6a0dad; 
+    background: linear-gradient(to bottom right, #6a0dad, #1e90ff); 
+    color: #fff; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(to bottom right, #9b30ff, #00bfff); 
+    transform: scale(1.05); 
+}
+
+.about{
+    background-image: url(Gaming-Desktop-Wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////// */
+
+
+/* INTERFACE CARDS  Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 9rem;
+}
+
+.feature {
+    padding: 2rem;
+    border-radius: 10px;
+    width: 20%;
+    text-align: center;
+    background: linear-gradient(to right, #78909C 25%, #546E7A 75%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature h3 {
+    color: #ECEFF1; /* Light grey text for better visibility */
+    margin-bottom: 1rem;    
+}
+
+.feature span {
+    display: block;
+    margin-top: 1.5rem;
+    color: #FFD740; 
+    font-weight: 900;
+}
+
+#display-icons {
+    height: 70px;
+    width: 70px;
+}
+.feature:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 
+///////////////////////////////////////////////////////////////////////////// */
+
+
+/* .slider-container {
+    position: relative;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;
+   
+    background-image: url(gamer.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+.slider img {
+   
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center;
+   
+}
+
+.gamer .slider img {
+    position: relative;
+    z-index: 0;
+}
+
+.highlight {
+   
+    z-index: 1;
+} */
+
+
+
+/* CHARACTER SLIDER SECTION  */
+
+ .slider {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;
+   background-image: url(characters.jpg);
+   background-position: center;
+   background-size: cover;
+
+   
+}
+
+.slider img {
+    height: 80%;
+    width: auto;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0.5;
+    position: absolute;
+    
+}
+
+.slider img:nth-child(1) {
+    transform: translateX(-100%) scale(0.8); 
+}
+
+.slider img:nth-child(2) {
+    transform: translateX(0) scale(1.2); 
+    opacity: 1;
+}
+
+.slider img:nth-child(3) {
+    transform: translateX(100%) scale(0.8);
+}
+
+.highlight {
+    z-index: 1;
+
+} 
+
+
+
+/* 
+/////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+/* GAMING BANNER SECTION  */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #59267b 0%, #410d63 50%, #16142d 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-section h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-section p {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+.button-section button {
+    background-color: #250368;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-section button:hover {
+    background-color: #06088f;
+}
+
+.image-section img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* //////////////////////////////////////////////////////////////// */
+
+
+
+
+
+/* ABOUT SECTION  */
+.container {
+    display: flex;
+    gap: 24px;
+    
+    background-color: #16142d;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.about-section {
+    flex: 2;
+    position: relative;
+}
+
+.about-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0; 
+}
+
+.about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: #f0f0f0; 
+}
+
+.about-text h2 {
+    font-size: 28px; 
+    margin-bottom: 10px; 
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 0; 
+}
+
+.about-text a {
+    color: #00b2ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 100px;
+}
+
+.card-discord, .card-play2learn {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(90deg, #59267b 0%, #410d63 50%, #16142d 100%);
+}
+
+.card-discord h3, .card-play2learn h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #00b2ff;
+}
+
+.card-discord p, .card-play2learn p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card-discord a, .card-play2learn a {
+    color: #00b2ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.card-discord a:hover, .card-play2learn a:hover {
+    color: #00d2ff;
+}
+
+.card-discord {
+    background: linear-gradient(90deg, #1b5ca9 0%, #13417d 50%, #0e2e5b 100%);
+}
+
+.card-play2learn {
+    background: linear-gradient(90deg, #59267b 0%, #410d63 50%, #16142d 100%);
+}
+
+/* ///////////////////////////////////////////////// */
+
+
+
+
+
+/* Leaderbboard and scroll section  */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    width: 100%;
+    padding: 20px;
+    background-image: url('Spere.gif'); 
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.content {
+    
+}
+
+.content h1 {
+    font-size: 48px;
+    color: white;
+}
+
+.content h2 {
+    font-size: 36px;
+    color: #00d2ff;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #00b2ff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: white;
+}
+
+.stats {
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.stat-item h3 {
+    font-size: 28px;
+    color: #00d2ff;
+}
+
+.stat-item p {
+    font-size: 18px;
+}
+
+/* Feature right  Section */
+.feature-section {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ width: 20vw;
+    height: auto;
+}
+
+.feature-block {
+    padding:20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.feature-block:hover {
+    opacity: 0.9;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(' '); 
+    background-size: cover;
+    background-position: center;
+   
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+
+.container-platform {
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background: linear-gradient(to right, #28d4a9, #4c84ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+    color: #28d4a9;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* Platform Info Section */
+.platform-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;  /* Ensures elements wrap on smaller screens */
+}
+
+.section-left, .section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 100px;
+
+}
+
+.box {
+    padding: 20px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 280px;  
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.orange {
+    background: linear-gradient(45deg, #e65c00, #ff8c00);
+}
+
+.green {
+    background: linear-gradient(45deg, #2ebf4f, #157c36);
+}
+
+.yellow {
+    background: linear-gradient(45deg, #ffcc00, #d49e00);
+}
+
+.pink {
+    background: linear-gradient(45deg, #ff006a, #b82098);
+}
+
+.purple {
+    background: linear-gradient(45deg, #6a00ff, #7824f3);
+}
+
+.blue {
+    background: linear-gradient(45deg, #005eff, #1363c5);
+}
+
+.teal {
+    background: linear-gradient(45deg, #22d498, #0a947a);
+}
+
+.red {
+    background: linear-gradient(45deg, #ff4d4d, #da2b1e);
+}
+
+/* Center icon */
+.center-icon {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.center-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   margin-left: 100px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
+}
+
+/* Button */
+.host-button {
+    margin-top: 40px;
+    padding: 18px 35px;
+    background-color: #ffffff;
+    color: #0f0f2d;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.host-button:hover {
+    background: linear-gradient(to right, #28d4a9, #4c84ff);
+    color: white;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .platform-info {
+        flex-direction: column;  /* Stack elements on smaller screens */
+        gap: 20px;
+    }
+
+    .box {
+        width: 90%; /* Allow boxes to take up more space on smaller screens */
+    }
+}
+
+
+
+
+
+
+/* GAMING STICKY BUTTON */
+
+
+/* 
+/////////////////////////////////////////////////////////////////////// */
+
+/* Gradient background */
+/* Container for the scrolling area */
+/* Container for the scrolling area */
+.display-scroll {
+    padding: 20px;
+    overflow: hidden; /* Hide the overflow for the marquee */
+    position: relative;
+}
+
+/* Glass card styling */
+.card-container {
+    display: flex;
+    gap: 20px;
+    animation: marquee 15s linear infinite; /* Continuous scrolling animation */
+    width: max-content; /* Ensure that the container expands horizontally */
+}
+
+/* Individual card styling */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    height: 350px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Slight border */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    overflow: hidden;
+    background-color: transparent; /* Remove solid background */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+/* Images with a subtle 3D effect */
+.card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on image */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Text styling */
+.card h3 {
+    font-size: 1.3rem;
+    color: #ffffff; /* White text for contrast */
+    margin-top: 10px;
+}
+
+.card p {
+    color: #f0f0f0;
+    margin: 10px 0;
+}
+
+/* Infinite Scroll Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Optional Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .card-container {
+        animation-duration: 30s; /* Slower animation on smaller screens */
+    }
+
+    .card {
+        width: 150px;
+        height: 300px;
+    }
+}
+
+
+
+
+/* 
+
+/* SCROLL MARQUEE SECTION  */
+
+/* .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    
+  }
+  
+  .card-container {
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+  }
+
+  .card {
+    width: 250px;
+    background-color: #1f1f1f;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: rgb(0, 0, 0);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    color: #61dafb;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  } */ 

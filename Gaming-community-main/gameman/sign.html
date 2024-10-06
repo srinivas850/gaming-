@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url(signup.gif);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            
+        }
+        .login-section{
+            background-image: url(signup.gif);
+            background-size: cover;
+            background-position: center;
+        }
+        
+
+        
+
+       
+        .spacer {
+            height: 100px; 
+        }
+
+       
+        .login-container {
+            margin-top: 2rem; 
+            padding: 50px;
+            width: 400px;
+            background-color: #1a1a3d;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(70, 0, 255, 0.7), 0 0 60px rgba(100, 0, 255, 0.8);
+            border: 5px solid transparent;
+            border-image: linear-gradient(90deg, rgba(70, 0, 255, 1), rgba(0, 255, 255, 1), rgba(128, 0, 255, 1), rgba(0, 0, 255, 1)) 1;
+            animation: scrollingShine 5s linear infinite;
+            background-clip: padding-box;
+        }
+
+        @keyframes scrollingShine {
+            0% {
+                border-image-source: linear-gradient(90deg, rgba(70, 0, 255, 1), rgba(0, 255, 255, 1), rgba(128, 0, 255, 1), rgba(0, 0, 255, 1));
+            }
+            100% {
+                border-image-source: linear-gradient(450deg, rgba(0, 255, 255, 1), rgba(0, 0, 255, 1), rgba(128, 0, 255, 1), rgba(70, 0, 255, 1));
+            }
+        }
+
+        .login-container h1 {
+            color: #00ccff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+        }
+
+        .input-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            background-color: #26264d;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(70, 0, 255, 0.4), 0 0 10px rgba(70, 0, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            background-color: #333366;
+            box-shadow: 0 0 20px rgba(100, 0, 255, 0.7), 0 0 15px rgba(70, 0, 255, 0.5);
+        }
+
+        button {
+            padding: 15px;
+            background-color: #6600ff;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 0 20px rgba(100, 0, 255, 0.7), 0 0 30px rgba(100, 0, 255, 0.4);
+        }
+
+        button:hover {
+            background-color: #5500dd;
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(150, 0, 255, 0.9), 0 0 40px rgba(70, 0, 255, 0.8);
+        }
+
+        .error {
+            color: #ff4c4c;
+            font-size: 0.9rem;
+            margin-top: -10px;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333366;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 0 20px rgba(100, 0, 255, 0.7), 0 0 15px rgba(70, 0, 255, 0.5);
+        }
+
+        .social-button:hover {
+            background-color: #444488;
+        }
+
+        .social-button img {
+            margin-right: 10px;
+        }
+
+        .help-text {
+            color: #00ccff;
+            margin-top: 20px;
+        }
+        .quests-btn {
+    background-color: #FFD740;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #111;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-sign a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.button-sign a:hover {
+    text-decoration: none;
+    color: #7417bc;
+}
+    </style>
+</head>
+<body>
+
+<!-- 
+    <div class="header-section">
+        <header>
+            <div class="navbar">
+                <div class="logo">Core Gaming</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Player</a></li>
+                        <li><a href="#">Organizer</a></li>
+                    </ul>
+                </nav>
+                <div class="auth">
+                    <button class="quests-btn">Quests</button>
+                    <a href="sign.html" class="sign-up">Sign Up</a>
+                    <a href="registration.html" class="sign-in">Sign In</a>
+                </div>
+            </div>
+        </header>
+
+    </div> -->
+   
+    
+  
+
+    <div class="login-section">
+        <div class="login-container">
+            <h1>Welcome!</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <button type="submit">Continue</button>
+                <div id="errorMsg" class="error"></div>
+            </form>
+    
+            <div class="help-text">Having trouble?</div>
+    
+            <div class="social-buttons">
+                <a href="#" class="social-button"><img src="google.png" alt="Google" width="24"> Continue with Google</a>
+                <a href="#" class="social-button"><img src="discord.png" alt="Discord" width="24"> Continue with Discord</a>
+                <a href="#" class="social-button"><img src="facebook.png" alt="Facebook" width="24"> Continue with Facebook</a>
+                <a href="#" class="social-button"><img src="twitter.png" alt="X" width="24"> Continue with X</a>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+    const form = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!emailPattern.test(email)) {
+            errorMsg.textContent = 'Please enter a valid email address.';
+            return;
+        }
+
+        errorMsg.textContent = '';  
+        window.location.href = "index.html";
+    });
+</script>
+
+</body>
+</html>
